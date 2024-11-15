@@ -5,27 +5,30 @@
 body {
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 95vh;
+    margin: 0;
+    padding: 0;
 }
 
 body .parent-wrapper {
-    padding: 2rem;
-    margin: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 98%;
-    height: 98%;
     border: var(--border-style);
     box-sizing: border-box;
 }
 
 body .parent-wrapper h1,
 body .parent-wrapper h2 {
-    margin-bottom: 10px;
-    width: 99%;
+    margin-bottom: 10px ;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
     padding: 1.5rem;
     border: var(--border-style);
     text-align: center;
@@ -37,21 +40,24 @@ body .parent-wrapper h2 {
 }
 
 body .parent-wrapper .card-section-container {
-    flex: 1 0 50%;
+    padding: 1.5rem;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
+    
 }
 
 
 body .parent-wrapper .card-section-container .card {
     padding-top: 1rem;
-    width: 80%;
+    width: 25%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 body .parent-wrapper .card-section-container .card .card-top-content {
