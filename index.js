@@ -12,24 +12,24 @@ function createCard(cardSection, imgSrc) {
     const topContentWrapper = document.createElement('div');
     topContentWrapper.classList.add('card-top-content');
     topContentWrapper.style.visibility = 'hidden';
-    
+
     //Top content image
     const topContentImage = document.createElement('div');
     topContentImage.classList.add('image');
     topContentImage.style.background = `url(${imgSrc}) no-repeat`;
     topContentImage.style.backgroundSize = 'cover';
     topContentWrapper.appendChild(topContentImage);
-    
+
     //Wrapper for hide result button
     const topHideContentWrapper = document.createElement('div');
     topHideContentWrapper.classList.add('hide-content-wrapper');
     topContentWrapper.appendChild(topHideContentWrapper);
-    
+
     //Hide result button
     const hideResultButton = document.createElement('button');
     hideResultButton.classList.add('hide-result-btn');
     hideResultButton.innerText = 'Hide Result'
-    
+
     hideResultButton.addEventListener('click', () => {
         topContentWrapper.style.visibility = 'hidden'
     });
@@ -55,10 +55,13 @@ function createCard(cardSection, imgSrc) {
     return card;
 }
 
+//instantiate card section A, B, C
 const cardA = createCard('A', './assets/css-letter-a.png');
 const cardB = createCard('B', './assets/css-letter-b.png');
-const cardC =createCard('C', './assets/css-letter-c.png');
+const cardC = createCard('C', './assets/css-letter-c.png');
 
+
+//append card to the card container wrapper
 cardContainter.appendChild(cardA);
 cardContainter.appendChild(cardB);
 cardContainter.appendChild(cardC);
